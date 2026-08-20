@@ -60,6 +60,6 @@ All results are automatically saved in the ./results/{dataset_name}/ directory:
 
 
 ## Get Involved
-Should you have any query please contact me at [zhangming@hccl.ioa.ac.cn](mailto:zhangming@hccl.ioa.ac.cn).
+Should you have any query please contact me.
 Please create a GitHub issue if you have any questions, suggestions, requests or bug-reports. 
 Don't hesitate to send us an e-mail or report an issue, if something is broken or if you have further questions.
