@@ -1,4 +1,4 @@
-# SARL4ASD
+# SACL4ASD
  Subsample-aware angular-margin contrastive learning for robust anomalous sound detection
 
 ## Citation
