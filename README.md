@@ -1,5 +1,6 @@
 # SACL4ASD
- Subsample-aware angular-margin contrastive learning for robust anomalous sound detection
+Subsample-aware acoustic representation learning with
+angular margins for robust anomalous sound detection
 
 ## Citation
 If you use this code in your research, please cite our paper:
@@ -8,7 +9,7 @@ If you use this code in your research, please cite our paper:
 This repository provides a complete end-to-end pipeline for robust anomalous sound detection:
 - A subsample-aware background exchange strategy improves sample diversity.
 - ArcFace-enhanced contrastive learning improves feature discrimination.
-- Subsample fusion with K-means enables machine-agnostic anomaly scoring.
+-  A paired subsample fusion strategy is introduced for prototype-based anomaly scoring.
 
 ## Project Structure
 
@@ -18,7 +19,13 @@ This repository provides a complete end-to-end pipeline for robust anomalous sou
 
 ├── config.yaml           # Global experiment configuration, including model and training settings
 
-├── model.py              # Implementation of the proposed model and its main components
+├── dataset           # subsample-aware and Back-Ex
+
+├── tools           # train, fusion loss, and pair subsample fusion
+
+├── model             # Implementation of the proposed model and its main components
+
+├── da             # data augmentation
 
 └── README.md             # Project overview, environment setup, usage, and reproduction instructions
 
@@ -48,12 +55,12 @@ More details can be find in this [link](https://dcase.community/challenge2024/in
 
 ## Quick Start
 1. Configure Datasets
-Place your hyperspectral datasets in .mat format in the datasets/ directory
+Place your audio datasets in .wav format in the ./data
 
 2. Update config.py to add your dataset paths:
 
 3. Run the Full Pipeline:
-python model.py
+python train.py
 
 4. Output Results
 All results are automatically saved in the ./results/{dataset_name}/ directory:
